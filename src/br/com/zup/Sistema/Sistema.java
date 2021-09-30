@@ -76,19 +76,19 @@ public class Sistema {
         return string;
     }
 
-
-    public static void imc() {
-        String nomePessoa = dadosDeUsuario("\nNome: ").nextLine();
-        double pesoDaPesoa = dadosDeUsuario("\nPeso: ").nextDouble();
-        double alturaDaPessoa = dadosDeUsuario("\nAltura: ").nextDouble();
+    public static Pessoa informacoesDoPaciente(){
+        String nomePessoa = dadosDeUsuario("nNome: ").nextLine();
+        double pesoDaPesoa = dadosDeUsuario("Peso: ").nextDouble();
+        double alturaDaPessoa = dadosDeUsuario("Altura: ").nextDouble();
         Pessoa pessoa = new Pessoa(nomePessoa, pesoDaPesoa, alturaDaPessoa);
-        Imc imc = new Imc(pessoa);
-        imc.calculoImc();
-        imc.exibirCalculo();
+
+        return pessoa;
     }
 
+
+
     public static void run() {
-        imc();
+
         boolean menu = true;
         Cardapio cardapio = new Cardapio();
         while (menu) {
