@@ -21,13 +21,8 @@ public class Imc {
     }
 
     public Double calculoImc(){
-        double calculo = pessoa.getPeso() / (pessoa.getAltura()* pessoa.getAltura());
+        double calculo = Math.round(pessoa.getPeso() / (pessoa.getAltura()* pessoa.getAltura()));
         return calculo;
-    }
-
-    public void exibirCalculo(){
-        System.out.print("O imc é: ");
-        System.out.println(Math.round(calculoImc()));
     }
 
     private final double ABAIXO_DO_PESO = 18.5;
