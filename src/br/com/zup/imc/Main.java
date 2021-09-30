@@ -1,5 +1,6 @@
 package br.com.zup.imc;
 
+import br.com.zup.Almoco.Almoco;
 import br.com.zup.pessoa.Pessoa;
 
 public class Main {
@@ -10,6 +11,10 @@ public class Main {
         imc.calculoImc();
         imc.exibirCalculo();
         imc.faixasDePeso();
+
+        br.com.zup.Almoco.Almoco almoco = new Almoco();
+
+
     }
 
 

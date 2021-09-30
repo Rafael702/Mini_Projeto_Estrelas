@@ -28,6 +28,12 @@ public class RefeicoesDiarias {
     public void setQtdDeCaloria(double qtdDeCaloria) {
         this.qtdDeCaloria = qtdDeCaloria;
     }
+
+    // Método para adicionar caloria
+    public double adicionarCaloria(double qtdDeCaloria){
+        return this.qtdDeCaloria += qtdDeCaloria;
+    }
+
     @Override
     public String toString() {
         StringBuilder dados = new StringBuilder();
