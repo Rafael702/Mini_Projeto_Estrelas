@@ -77,15 +77,13 @@ public class Sistema {
     }
 
     public static Pessoa informacoesDoPaciente(){
-        String nomePessoa = dadosDeUsuario("nNome: ").nextLine();
+        String nomePessoa = dadosDeUsuario("Nome: ").nextLine();
         double pesoDaPesoa = dadosDeUsuario("Peso: ").nextDouble();
         double alturaDaPessoa = dadosDeUsuario("Altura: ").nextDouble();
         Pessoa pessoa = new Pessoa(nomePessoa, pesoDaPesoa, alturaDaPessoa);
 
         return pessoa;
     }
-
-
 
     public static void run() {
 
