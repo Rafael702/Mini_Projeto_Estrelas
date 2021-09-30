@@ -2,15 +2,13 @@ package br.com.zup.pessoa;
 
 public class Pessoa {
     private String nome;
-    private int peso;
+    private double peso;
     private double altura;
-    private double nivelCaloria;
 
-    public Pessoa(String nome, int peso, double altura, double nivelCaloria) {
+    public Pessoa(String nome, double peso, double altura) {
         this.nome = nome;
         this.peso = peso;
         this.altura = altura;
-        this.nivelCaloria = nivelCaloria;
     }
 
     public String getNome() {
@@ -21,11 +19,11 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
@@ -37,13 +35,6 @@ public class Pessoa {
         this.altura = altura;
     }
 
-    public double getNivelCaloria() {
-        return nivelCaloria;
-    }
-
-    public void setNivelCaloria(double nivelCaloria) {
-        this.nivelCaloria = nivelCaloria;
-    }
 
     @Override
     public String toString() {
@@ -51,7 +42,6 @@ public class Pessoa {
        retorno.append("Nome: " + nome);
        retorno.append("\nPeso: " + peso);
        retorno.append("\nAltura: " + altura);
-       retorno.append("\nNivel de Caloria: " + nivelCaloria);
        return retorno.toString();
     }
 }
