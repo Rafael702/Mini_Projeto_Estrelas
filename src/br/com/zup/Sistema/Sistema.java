@@ -68,6 +68,7 @@ public class Sistema {
                 }
             }
         }
+        System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(refeicoesDiarias.getQtdDeCaloria()));
     }
 
     public static String alterarString(String mensagem) {
