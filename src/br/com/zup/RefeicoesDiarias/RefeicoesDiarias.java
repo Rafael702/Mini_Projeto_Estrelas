@@ -30,7 +30,7 @@ public class RefeicoesDiarias {
     }
 
     // Método para adicionar caloria
-    public double adicionarCaloria(double qtdDeCaloria){
+    public double somarCaloria(double qtdDeCaloria){
         return this.qtdDeCaloria += qtdDeCaloria;
     }
 
