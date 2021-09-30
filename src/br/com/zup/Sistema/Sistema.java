@@ -45,12 +45,14 @@ public class Sistema {
                 while (contador <= 3) {
                     CafeDaManha cafe = new CafeDaManha(adicioanrAlimentos("Café da Manhã"), adicioanrCaloria());
                     System.out.println(cardapio.adicionarAlimentoNoCafedaManha(cafe));
+                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(cafe.getQtdDeCaloria()));
                     contador++;
                 }
             } else if (i == 2) {
                 while (contador <= 3) {
                     Almoco almoco = new Almoco(adicioanrAlimentos("Almoço"), adicioanrCaloria());
                     cardapio.adicionarAlimentoNoAlmoco(almoco);
+                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(almoco.getQtdDeCaloria()));
                     contador++;
                 }
             } else if (i == 3) {
@@ -58,17 +60,18 @@ public class Sistema {
                     LancheDaTarde lancheDaTarde = new LancheDaTarde(adicioanrAlimentos("Lanche da Tarde"),
                             adicioanrCaloria());
                     cardapio.adicionarAlimentoNoLancheDaTarde(lancheDaTarde);
+                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(lancheDaTarde.getQtdDeCaloria()));
                     contador++;
                 }
             } else if (i == 4) {
                 while (contador <= 3) {
                     Jantar jantar = new Jantar(adicioanrAlimentos("Jantar"), adicioanrCaloria());
                     cardapio.adicionarAlimentoNoJantar(jantar);
+                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(jantar.getQtdDeCaloria()));
                     contador++;
                 }
             }
         }
-        System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(refeicoesDiarias.getQtdDeCaloria()));
     }
 
     public static String alterarString(String mensagem) {
@@ -81,6 +84,7 @@ public class Sistema {
         double pesoDaPesoa = dadosDeUsuario("Peso: ").nextDouble();
         double alturaDaPessoa = dadosDeUsuario("Altura: ").nextDouble();
         Pessoa pessoa = new Pessoa(nomePessoa, pesoDaPesoa, alturaDaPessoa);
+        Imc imc = new Imc(pessoa);
 
         return pessoa;
     }

@@ -39,9 +39,9 @@ public class Pessoa {
     @Override
     public String toString() {
        StringBuffer retorno = new StringBuffer();
-       retorno.append("Nome: " + nome);
-       retorno.append("\nPeso: " + peso);
-       retorno.append("\nAltura: " + altura);
+       retorno.append("Nome da pessoa: " + nome);
+       retorno.append("\nPeso da pessoa: " + peso);
+       retorno.append("\nAltura da pessoa: " + altura);
        return retorno.toString();
     }
 }
