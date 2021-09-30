@@ -3,6 +3,9 @@ package src.br.com.zup.LancheDaTarde;
 public class LancheDaTarde extends br.com.zup.RefeicoesDiarias.RefeicoesDiarias {
 
     // Método construtor
+    public LancheDaTarde() {
+    }
+
     public LancheDaTarde(String nomeDoAlimento, double qtdDeCaloria) {
         super(nomeDoAlimento, qtdDeCaloria);
     }
