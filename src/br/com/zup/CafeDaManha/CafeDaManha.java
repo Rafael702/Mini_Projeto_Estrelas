@@ -4,6 +4,8 @@ import br.com.zup.RefeicoesDiarias.RefeicoesDiarias;
 
 public class CafeDaManha extends RefeicoesDiarias {
 
+    public CafeDaManha() {
+    }
 
     public CafeDaManha(String nomeDoAlimento, double qtdDeCaloria) {
         super(nomeDoAlimento, qtdDeCaloria);

@@ -1,7 +1,7 @@
-package src.br.com.zup.Cardapio;
+package br.com.zup.Cardapio;
 
-import src.br.com.zup.Jantar.Jantar;
-import src.br.com.zup.LancheDaTarde.LancheDaTarde;
+import br.com.zup.Jantar.Jantar;
+import br.com.zup.LancheDaTarde.LancheDaTarde;
 import br.com.zup.Almoco.Almoco;
 import br.com.zup.CafeDaManha.CafeDaManha;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cardapio {
-
+    CafeDaManha cafe;
     private List<CafeDaManha> cafeDaManha = new ArrayList<>();
     private List<Almoco> almoco = new ArrayList<>();
     private List<LancheDaTarde> lancheDaTarde = new ArrayList<>();

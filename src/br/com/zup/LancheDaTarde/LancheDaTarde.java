@@ -1,4 +1,4 @@
-package src.br.com.zup.LancheDaTarde;
+package br.com.zup.LancheDaTarde;
 
 public class LancheDaTarde extends br.com.zup.RefeicoesDiarias.RefeicoesDiarias {
 
