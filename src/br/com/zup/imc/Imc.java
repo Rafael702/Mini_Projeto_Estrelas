@@ -26,7 +26,7 @@ public class Imc {
     }
 
     public void exibirCalculo(){
-        System.out.println("Seu imc é: ");
+        System.out.print("Seu imc é: ");
         System.out.println(Math.round(calculoImc()));
     }
 
