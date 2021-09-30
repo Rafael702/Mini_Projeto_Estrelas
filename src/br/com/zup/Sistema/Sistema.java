@@ -36,35 +36,46 @@ public class Sistema {
             String mensagem = "Digite o nome do alimento: ";
             String nome;
             double qtdDeCalorias;
-
+            int qtdDeAlimentos = dadosDeUsuario("Quantos alimentos deseja adicionar na refeição: ").nextInt();
+            int opcao2 = 1;
 
             if (i == 1) {
-                while (i <= 3) {
+                while ( opcao2 <= qtdDeAlimentos) {
                     nome = dadosDeUsuario(alterarString((mensagem).replace("nome do alimento:", " Café da manhã: "))).nextLine();
                     qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
                     CafeDaManha cafeDaManha = new CafeDaManha(nome, qtdDeCalorias);
                     cardapio.adicionarAlimentoNoCafedaManha(cafeDaManha);
-                    System.out.println("Total de calorias do Café da manhã: " + refeicoesDiarias.somarCaloria(cafeDaManha.getQtdDeCaloria()));
-                    i++;
+                    opcao2++;
                 }
 
             } else if (i == 2) {
-                nome = dadosDeUsuario(alterarString((mensagem).replace("nome do alimento:", " Almoço: "))).nextLine();
-                qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
-                Almoco almoco = new Almoco(nome, qtdDeCalorias);
-                cardapio.adicionarAlimentoNoAlmoco(almoco);
+                while (opcao2 < qtdDeAlimentos) {
+                    nome = dadosDeUsuario(alterarString((mensagem).replace("nome do alimento:", " Almoço: "))).nextLine();
+                    qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
+                    Almoco almoco = new Almoco(nome, qtdDeCalorias);
+                    cardapio.adicionarAlimentoNoAlmoco(almoco);
+                    opcao2++;
+                }
             } else if (i == 3) {
-                nome = dadosDeUsuario(alterarString((mensagem).replace("nome do alimento:", " Lanche da tarde: "))).nextLine();
-                qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
-                LancheDaTarde lancheDaTarde = new LancheDaTarde(nome, qtdDeCalorias);
-                cardapio.adicionarAlimentoNoLancheDaTarde(lancheDaTarde);
+
+                while (opcao2 < qtdDeAlimentos){
+                    nome = dadosDeUsuario(alterarString((mensagem).replace("nome do alimento:", " Lanche da tarde: "))).nextLine();
+                    qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
+                    LancheDaTarde lancheDaTarde = new LancheDaTarde(nome, qtdDeCalorias);
+                    cardapio.adicionarAlimentoNoLancheDaTarde(lancheDaTarde);
+                    opcao2++;
+                }
             } else if (i == 4) {
-                nome = dadosDeUsuario(alterarString((mensagem).replace("nome do alimento:", " Jantar: "))).nextLine();
-                qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
-                Jantar jantar = new Jantar(nome, qtdDeCalorias);
-                cardapio.adicionarAlimentoNoJantar(jantar);
+                while (opcao2 < qtdDeAlimentos) {
+                    nome = dadosDeUsuario(alterarString((mensagem).replace("nome do alimento:", " Jantar: "))).nextLine();
+                    qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
+                    Jantar jantar = new Jantar(nome, qtdDeCalorias);
+                    cardapio.adicionarAlimentoNoJantar(jantar);
+                    opcao2++;
+                }
             }
         }
+        System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(refeicoesDiarias.getQtdDeCaloria()));
     }
 
     public static String alterarString(String mensagem) {
