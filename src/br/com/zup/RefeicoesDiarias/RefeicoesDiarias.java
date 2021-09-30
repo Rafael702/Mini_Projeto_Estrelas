@@ -28,5 +28,12 @@ public class RefeicoesDiarias {
     public void setQtdDeCaloria(double qtdDeCaloria) {
         this.qtdDeCaloria = qtdDeCaloria;
     }
+    @Override
+    public String toString() {
+        StringBuilder dados = new StringBuilder();
+        dados.append("\nNome do alimento: " + nomeDoAlimento);
+        dados.append("\nQuantidade de caloria: " + qtdDeCaloria);
+        return dados.toString();
+    }
 
 }
