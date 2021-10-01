@@ -1,6 +1,6 @@
 package br.com.zup.almoco;
 
-import br.com.zup.refeicoesDiarias.RefeicoesDiarias;
+import br.com.zup.refeicoesdiarias.RefeicoesDiarias;
 
 public class Almoco extends RefeicoesDiarias {
 

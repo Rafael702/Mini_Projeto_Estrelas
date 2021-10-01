@@ -1,11 +1,11 @@
 package br.com.zup.sistema;
 
 import br.com.zup.almoco.Almoco;
-import br.com.zup.cafeDaManha.CafeDaManha;
+import br.com.zup.cafedamanha.CafeDaManha;
 import br.com.zup.cardapio.Cardapio;
-import br.com.zup.Jantar.Jantar;
-import br.com.zup.lancheDaTarde.LancheDaTarde;
-import br.com.zup.refeicoesDiarias.RefeicoesDiarias;
+import br.com.zup.jantar.Jantar;
+import br.com.zup.lanchedatarde.LancheDaTarde;
+import br.com.zup.refeicoesdiarias.RefeicoesDiarias;
 import br.com.zup.imc.Imc;
 import br.com.zup.pessoa.Pessoa;
 
@@ -84,7 +84,7 @@ public class Sistema {
         Cardapio cardapio = new Cardapio();
         RefeicoesDiarias refeicoesDiarias = new RefeicoesDiarias();
 
-        System.out.println("------------- BEM VINDOS AO DIETA SAUDAVEL -------------");
+        System.out.println("------------- BEM VINDOS AO TELANUTRI -------------");
         Imc imc = new Imc(informacoesDoPaciente());
 
         imc.calculoImc();
