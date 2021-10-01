@@ -1,4 +1,4 @@
-package br.com.zup.refeicoesDiarias;
+package br.com.zup.refeicoesdiarias;
 
 public class RefeicoesDiarias {
 

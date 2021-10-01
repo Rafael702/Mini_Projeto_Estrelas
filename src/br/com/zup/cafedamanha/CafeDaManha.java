@@ -1,6 +1,6 @@
-package br.com.zup.cafeDaManha;
+package br.com.zup.cafedamanha;
 
-import br.com.zup.refeicoesDiarias.RefeicoesDiarias;
+import br.com.zup.refeicoesdiarias.RefeicoesDiarias;
 
 public class CafeDaManha extends RefeicoesDiarias {
 

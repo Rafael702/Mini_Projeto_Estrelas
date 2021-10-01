@@ -1,6 +1,6 @@
-package br.com.zup.Jantar;
+package br.com.zup.jantar;
 
-public class Jantar extends br.com.zup.refeicoesDiarias.RefeicoesDiarias {
+public class Jantar extends br.com.zup.refeicoesdiarias.RefeicoesDiarias {
 
     public Jantar() {
     }
