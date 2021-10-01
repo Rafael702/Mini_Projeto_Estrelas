@@ -20,7 +20,7 @@ public class Imc {
         this.pessoa = pessoa;
     }
 
-    public Double calculoImc(){
+    public double calculoImc(){
         double calculo = Math.round(pessoa.getPeso() / (pessoa.getAltura()* pessoa.getAltura()));
         return calculo;
     }
@@ -32,7 +32,7 @@ public class Imc {
         if(calculoImc() < ABAIXO_DO_PESO){
             System.out.println("Abaixo do Peso");
         }else if(calculoImc() <= PESO_NORMAL){
-            System.out.println("Peso Normal");
+            System.out.println("Dentro do peso ideal");
         }else {
             System.out.println("SobrePeso");
         }
