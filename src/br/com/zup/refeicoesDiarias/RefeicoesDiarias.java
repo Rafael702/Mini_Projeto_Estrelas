@@ -1,13 +1,14 @@
-package br.com.zup.RefeicoesDiarias;
+package br.com.zup.refeicoesDiarias;
 
 public class RefeicoesDiarias {
 
     private String nomeDoAlimento;
     private double qtdDeCaloria;
 
-    public RefeicoesDiarias(){
+    public RefeicoesDiarias() {
 
     }
+
     public RefeicoesDiarias(String nomeDoAlimento, double qtdDeCaloria) {
         this.nomeDoAlimento = nomeDoAlimento;
         this.qtdDeCaloria = qtdDeCaloria;
@@ -30,7 +31,7 @@ public class RefeicoesDiarias {
     }
 
     // Método para adicionar caloria
-    public double somarCaloria(double qtdDeCaloria){
+    public double somarCaloria(double qtdDeCaloria) {
         return this.qtdDeCaloria += qtdDeCaloria;
     }
 
@@ -41,5 +42,4 @@ public class RefeicoesDiarias {
         dados.append("\nQuantidade de caloria: " + qtdDeCaloria);
         return dados.toString();
     }
-
 }
