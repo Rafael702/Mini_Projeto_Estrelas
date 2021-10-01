@@ -44,10 +44,10 @@ public class Cardapio {
     @Override
     public String toString() {
         StringBuilder dados = new StringBuilder();
-        dados.append("\n Opções para o Café da manhã: " + cafeDaManha);
-        dados.append("\n Opções para o almoco: " + almoco);
-        dados.append("\n Opções para o lanche da tarde: " + lancheDaTarde);
-        dados.append("\n Opções para o jantar: " + jantar);
+        dados.append("\n *** Opções para o Café da manhã *** " + cafeDaManha);
+        dados.append("\n *** Opções para o almoco ***" + almoco);
+        dados.append("\n *** Opções para o lanche da tarde ***" + lancheDaTarde);
+        dados.append("\n *** Opções para o jantar *** " + jantar);
         return dados.toString();
     }
 }

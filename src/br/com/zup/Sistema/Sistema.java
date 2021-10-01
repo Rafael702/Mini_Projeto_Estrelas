@@ -20,7 +20,7 @@ public class Sistema {
 
     //menu inicial
     public static void menu() {
-        System.out.println("Digite [1] se deseja adicionar as refeiçoes do dia:");
+        System.out.println("Digite [1] se deseja adicionar as refeições do dia:");
         System.out.println("Digite [2] para ver cardapio:");
         System.out.println("Digite [3] se deseja sair do Programa:");
     }
@@ -40,28 +40,28 @@ public class Sistema {
     }
 
     public static CafeDaManha criarCafe() {
-        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para adicionar na refeição? ").nextLine();
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento? ").nextLine();
         double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
         CafeDaManha cafeDaManha = new CafeDaManha(nomeDoAlimento, qtdDeCaloria);
         return cafeDaManha;
     }
 
     public static Almoco criarAlmoco() {
-        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para adicionar na refeição? ").nextLine();
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento? ").nextLine();
         double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
         Almoco almoco = new Almoco(nomeDoAlimento, qtdDeCaloria);
         return almoco;
     }
 
     public static LancheDaTarde criarLanche() {
-        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para adicionar na refeição? ").nextLine();
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento? ").nextLine();
         double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
         LancheDaTarde lancheDaTarde = new LancheDaTarde(nomeDoAlimento, qtdDeCaloria);
         return lancheDaTarde;
     }
 
     public static Jantar criarJantar() {
-        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para adicionar na refeição? ").nextLine();
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento? ").nextLine();
         double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
         Jantar jantar = new Jantar(nomeDoAlimento, qtdDeCaloria);
         return jantar;
@@ -140,6 +140,7 @@ public class Sistema {
                 }
             } else if (opcoes == 2) {
                 System.out.println(cardapio);
+                System.out.println("Total de calorias do dia: " + refeicoesDiarias.somarCaloria(refeicoesDiarias.getQtdDeCaloria()));
             } else if (opcoes == 3) {
                 System.out.println("Voce saiu do programa!!");
                 menu = false;
