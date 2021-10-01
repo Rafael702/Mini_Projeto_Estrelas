@@ -17,61 +17,11 @@ public class Sistema {
         System.out.println(mensagem);
         return new Scanner(System.in);
     }
-
     //menu inicial
     public static void menu() {
-        System.out.println("------------- BEM VINDOS AO DIETA SAUDAVEL -------------");
-        System.out.println("Digite [1] se deseja adicionar as refeiçoes do dia");
-        System.out.println("Digite [2] para ver cardapio");
-        System.out.println("Digite [3] se deseja sair do Programa");
-    }
-
-    public static String adicioanrAlimentos(String mensagem) {
-        String nome = dadosDeUsuario("Digite o alimento do " + mensagem + ":").nextLine();
-        return nome;
-    }
-
-    public static Double adicioanrCaloria() {
-        double qtdDeCalorias = dadosDeUsuario("Digite quantidade de calorias: ").nextDouble();
-        return qtdDeCalorias;
-    }
-
-    public static void criarCardapio() {
-        Cardapio cardapio = new Cardapio();
-        RefeicoesDiarias refeicoesDiarias = new RefeicoesDiarias();
-        for (int i = 1; i <= 4; i++) {
-            int contador = 1;
-            if (i == 1) {
-                while (contador <= 3) {
-                    CafeDaManha cafe = new CafeDaManha(adicioanrAlimentos("Café da Manhã"), adicioanrCaloria());
-                    System.out.println(cardapio.adicionarAlimentoNoCafedaManha(cafe));
-                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(cafe.getQtdDeCaloria()));
-                    contador++;
-                }
-            } else if (i == 2) {
-                while (contador <= 3) {
-                    Almoco almoco = new Almoco(adicioanrAlimentos("Almoço"), adicioanrCaloria());
-                    cardapio.adicionarAlimentoNoAlmoco(almoco);
-                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(almoco.getQtdDeCaloria()));
-                    contador++;
-                }
-            } else if (i == 3) {
-                while (contador <= 3) {
-                    LancheDaTarde lancheDaTarde = new LancheDaTarde(adicioanrAlimentos("Lanche da Tarde"),
-                            adicioanrCaloria());
-                    cardapio.adicionarAlimentoNoLancheDaTarde(lancheDaTarde);
-                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(lancheDaTarde.getQtdDeCaloria()));
-                    contador++;
-                }
-            } else if (i == 4) {
-                while (contador <= 3) {
-                    Jantar jantar = new Jantar(adicioanrAlimentos("Jantar"), adicioanrCaloria());
-                    cardapio.adicionarAlimentoNoJantar(jantar);
-                    System.out.println("Total de Calorias: " + refeicoesDiarias.somarCaloria(jantar.getQtdDeCaloria()));
-                    contador++;
-                }
-            }
-        }
+        System.out.println("Digite [1] se deseja adicionar as refeiçoes do dia:");
+        System.out.println("Digite [2] para ver cardapio:");
+        System.out.println("Digite [3] se deseja sair do Programa:");
     }
 
     public static String alterarString(String mensagem) {
@@ -79,35 +29,58 @@ public class Sistema {
         return string;
     }
 
-    public static Pessoa informacoesDoPaciente(){
-        String nomePessoa = dadosDeUsuario("Nome: ").nextLine();
-        double pesoDaPesoa = dadosDeUsuario("Peso: ").nextDouble();
-        double alturaDaPessoa = dadosDeUsuario("Altura: ").nextDouble();
+    public static CafeDaManha criarCafe() {
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para add na refeião? ").nextLine();
+        double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
+        CafeDaManha cafeDaManha = new CafeDaManha(nomeDoAlimento, qtdDeCaloria);
+        return cafeDaManha;
+    }
+
+    public static Almoco criarAlmoco() {
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para add na refeião? ").nextLine();
+        double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
+        Almoco almoco = new Almoco(nomeDoAlimento, qtdDeCaloria);
+        return almoco;
+    }
+
+    public static LancheDaTarde criarLanche() {
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para add na refeião? ").nextLine();
+        double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
+        LancheDaTarde lancheDaTarde = new LancheDaTarde(nomeDoAlimento, qtdDeCaloria);
+        return lancheDaTarde;
+    }
+
+    public static Jantar criarJantar() {
+        String nomeDoAlimento = dadosDeUsuario("Qual nome do alimento para add na refeição? ").nextLine();
+        double qtdDeCaloria = dadosDeUsuario("Quantas calorias tem? ").nextDouble();
+        Jantar jantar = new Jantar(nomeDoAlimento, qtdDeCaloria);
+        return jantar;
+    }
+
+    public static Pessoa informacoesDoPaciente() {
+        System.out.println("---------- Dados de usuario -----------");
+        String nomePessoa = dadosDeUsuario("Nome do paciente: ").nextLine();
+        double pesoDaPesoa = dadosDeUsuario("Peso do paciente: ").nextDouble();
+        double alturaDaPessoa = dadosDeUsuario("Altura do paciente: ").nextDouble();
         Pessoa pessoa = new Pessoa(nomePessoa, pesoDaPesoa, alturaDaPessoa);
-        Imc imc = new Imc(pessoa);
 
         return pessoa;
     }
 
     public static void run() {
+        Cardapio cardapio = new Cardapio();
+        RefeicoesDiarias refeicoesDiarias = new RefeicoesDiarias();
 
         boolean menu = true;
-        Cardapio cardapio = new Cardapio();
+
+        System.out.println("------------- BEM VINDOS AO DIETA SAUDAVEL -------------");
+        Imc imc = new Imc(informacoesDoPaciente());
+
+        imc.calculoImc();
+        imc.faixasDePeso();
         while (menu) {
 
-            menu();
-            int opcao = dadosDeUsuario("Digite sua escolha").nextInt();
-            if (opcao == 1) {
-                criarCardapio();
-                cardapio.toString();
-            } else if (opcao == 2) {
-                System.out.println(cardapio);
-            } else if (opcao == 3) {
-                System.out.println("Você saiu do programa!!");
-                menu = false;
-            } else {
-                System.out.println("Digite um valor válido");
-            }
+
         }
     }
 }
