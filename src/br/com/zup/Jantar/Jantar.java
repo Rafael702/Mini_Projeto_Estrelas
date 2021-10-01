@@ -1,8 +1,7 @@
 package br.com.zup.Jantar;
 
-public class Jantar extends br.com.zup.RefeicoesDiarias.RefeicoesDiarias {
+public class Jantar extends br.com.zup.refeicoesDiarias.RefeicoesDiarias {
 
-    // Método construtor
     public Jantar() {
     }
 
@@ -10,24 +9,8 @@ public class Jantar extends br.com.zup.RefeicoesDiarias.RefeicoesDiarias {
         super(nomeDoAlimento, qtdDeCaloria);
     }
 
-    // Métodos getters e setters
     @Override
-    public String getNomeDoAlimento() {
-        return super.getNomeDoAlimento();
-    }
-
-    @Override
-    public void setNomeDoAlimento(String nomeDoAlimento) {
-        super.setNomeDoAlimento(nomeDoAlimento);
-    }
-
-    @Override
-    public double getQtdDeCaloria() {
-        return super.getQtdDeCaloria();
-    }
-
-    @Override
-    public void setQtdDeCaloria(double qtdDeCaloria) {
-        super.setQtdDeCaloria(qtdDeCaloria);
+    public String toString() {
+        return super.toString();
     }
 }

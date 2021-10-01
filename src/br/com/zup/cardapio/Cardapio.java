@@ -1,9 +1,9 @@
-package br.com.zup.Cardapio;
+package br.com.zup.cardapio;
 
 import br.com.zup.Jantar.Jantar;
-import br.com.zup.LancheDaTarde.LancheDaTarde;
-import br.com.zup.Almoco.Almoco;
-import br.com.zup.CafeDaManha.CafeDaManha;
+import br.com.zup.lancheDaTarde.LancheDaTarde;
+import br.com.zup.almoco.Almoco;
+import br.com.zup.cafeDaManha.CafeDaManha;
 
 import java.util.ArrayList;
 import java.util.List;
