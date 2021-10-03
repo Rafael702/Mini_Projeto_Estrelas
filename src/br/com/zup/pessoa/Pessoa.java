@@ -1,5 +1,7 @@
 package br.com.zup.pessoa;
 
+import br.com.zup.imc.Imc;
+
 public class Pessoa {
     private String nome;
     private double peso;
@@ -39,9 +41,9 @@ public class Pessoa {
     @Override
     public String toString() {
         StringBuffer retorno = new StringBuffer();
-        retorno.append("Nome da pessoa: " + nome);
-        retorno.append("\nPeso da pessoa: " + peso);
-        retorno.append("\nAltura da pessoa: " + altura);
+        retorno.append("\nNome do paciente: " + nome);
+        retorno.append("\nPeso: " + peso);
+        retorno.append("\nAltura: " + altura);
         return retorno.toString();
     }
 }

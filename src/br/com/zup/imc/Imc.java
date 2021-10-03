@@ -37,4 +37,12 @@ public class Imc {
             System.out.println("SobrePeso");
         }
     }
+    @Override
+    public String toString() {
+        StringBuilder exibirPaciente = new StringBuilder();
+
+        exibirPaciente.append("\n" + pessoa);
+
+        return exibirPaciente.toString();
+    }
 }

@@ -1,4 +1,4 @@
-package br.com.zup.cafedamanha;
+package br.com.zup.apagar.cafedamanha;
 
 import br.com.zup.refeicoesdiarias.RefeicoesDiarias;
 

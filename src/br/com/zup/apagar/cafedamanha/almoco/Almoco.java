@@ -1,4 +1,4 @@
-package br.com.zup.almoco;
+package br.com.zup.apagar.cafedamanha.almoco;
 
 import br.com.zup.refeicoesdiarias.RefeicoesDiarias;
 

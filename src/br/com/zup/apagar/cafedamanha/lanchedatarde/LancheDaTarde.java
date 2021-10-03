@@ -1,4 +1,4 @@
-package br.com.zup.lanchedatarde;
+package br.com.zup.apagar.cafedamanha.lanchedatarde;
 
 public class LancheDaTarde extends br.com.zup.refeicoesdiarias.RefeicoesDiarias {
 

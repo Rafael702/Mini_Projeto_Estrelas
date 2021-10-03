@@ -1,6 +1,5 @@
-package br.com.zup;
+package br.com.zup.sistema;
 
-import br.com.zup.sistema.Sistema;
 
 public class Main {
 
